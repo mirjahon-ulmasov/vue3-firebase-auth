@@ -1,5 +1,5 @@
 <template>
-  <h2>Register Page</h2>
+  <h2>Login Page</h2>
   <form @submit.prevent="submitHandler">
     <div class="input">
       <p>Email:</p>
@@ -10,12 +10,7 @@
       <input type="password" v-model="user.password" />
     </div>
     <div class="btn">
-      <button type="submit">Sign Up</button>
-    </div>
-    <div class="link">
-      <router-link :to="{ name: 'LoginPage' }"
-        >Already have an account?</router-link
-      >
+      <button type="submit">Log in</button>
     </div>
     <p v-if="error">{{ error }}</p>
   </form>
@@ -35,7 +30,7 @@ export default {
 
     const submitHandler = async () => {
       try {
-        await store.dispatch('signup', user.value);
+        await store.dispatch('login', user.value);
         user.value = { email: '', password: '' };
         router.push({ name: 'HomePage' });
       } catch (err) {
@@ -52,17 +47,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.link {
-  margin-top: 1rem;
-
-  a {
-    color: #333;
-    font-size: 15px;
-    border-bottom: 1px solid transparent;
-  }
-  a:hover {
-    border-bottom: 1px solid #aaa;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

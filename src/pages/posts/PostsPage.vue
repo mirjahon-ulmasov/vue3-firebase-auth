@@ -2,6 +2,7 @@
   <h2>Posts Page</h2>
   <div v-if="error">{{ error }}</div>
   <PostList v-else :posts="posts" />
+<vue-select :options="['1', '2', '3']" close-on-select></vue-select>
 </template>
 
 <script>

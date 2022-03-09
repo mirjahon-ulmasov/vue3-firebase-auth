@@ -11,7 +11,7 @@
     </div>
     <div class="input">
       <p>Author:</p>
-      <input type="text" v-model="post.author" class="input" required />
+      <input type="text" v-model="post.author" required />
     </div>
     <div class="input">
       <p>Image:</p>
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { reactive, ref } from '@vue/reactivity';
+import { reactive, ref } from 'vue';
 import axios from 'axios';
 
 export default {
@@ -64,7 +64,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 form {
   width: 30rem;
   margin: 0 auto;

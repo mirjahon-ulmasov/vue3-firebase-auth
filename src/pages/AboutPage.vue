@@ -15,6 +15,19 @@
     Facilis aliquam magni non, delectus voluptate porro impedit? Aliquid, labore
     a. Libero sint optio quis quam esse rem dolor saepe repellat aut!
   </p>
+  <div class="container">
+    <div class="row">
+      <div class="header">
+        <h1>Hello</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quam
+          quis aliquam eligendi, officia in voluptatem amet perferendis. Sunt ea
+          voluptatem dolore adipisci sequi, praesentium eum ipsa nesciunt
+          molestiae aliquam!
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -30,5 +43,26 @@ p {
   max-width: 40rem;
   margin: 4rem auto;
   text-align: left;
+}
+
+.container {
+  background: red;
+  padding: 1rem;
+  .row {
+    background: green;
+    padding: 1rem;
+    .header {
+      background: yellow;
+      padding: 1rem;
+      h1 {
+        color: blue;
+        font-size: 40px;
+      }
+      p {
+        color: green;
+        font-size: 20px;
+      }
+    }
+  }
 }
 </style>
